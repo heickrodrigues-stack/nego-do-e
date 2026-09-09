@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA Studio | Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BARRA DE ANÚNCIO MINIMALISTA -->
+  <div class="top-bar">
+    <span>FRETE GRÁTIS EM PEDIDOS ACIMA DE R$ 400 | NOVA COLEÇÃO DISPONÍVEL</span>
+  </div>
+
+  <!-- CABEÇALHO -->
+  <header class="main-header">
+    <div class="header-left">
+      <button class="menu-btn">MENU</button>
+    </div>
+    <div class="logo-container">
+      <h1 class="brand-logo">AURA</h1>
+      <p class="brand-sub">STUDIO</p>
+    </div>
+    <div class="header-right">
+      <button class="cart-btn" onclick="toggleCart()">BAG (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO DE CATEGORIAS -->
+  <nav class="category-nav">
+    <button class="cat-btn active" onclick="filterCategory('all')">VER TUDO</button>
+    <button class="cat-btn" onclick="filterCategory('casacos')">CASACOS & BLAZERS</button>
+    <button class="cat-btn" onclick="filterCategory('vestidos')">VESTIDOS</button>
+    <button class="cat-btn" onclick="filterCategory('calcas')">CALÇAS</button>
+    <button class="cat-btn" onclick="filterCategory('acessorios')">ACESSÓRIOS</button>
+  </nav>
+
+  <!-- CATÁLOGO DE PRODUTOS -->
+  <main class="catalog-container">
+    <div class="products-grid" id="productsGrid">
+      <!-- Injetado dinamicamente via JS -->
+    </div>
+  </main>
+
+  <!-- PAINEL LATERAL DO CARRINHO E PAGAMENTO -->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>SUA SACOLA</h2>
+      <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div class="cart-body" id="cartItems">
+      <p class="empty-msg">Sua sacola está vazia.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>TOTAL</span>
+        <span id="cartTotal">R$ 0,00</span>
+      </div>
+
+      <!-- FORMAS DE PAGAMENTO -->
+      <div class="payment-methods">
+        <p class="payment-title">FORMAS DE PAGAMENTO ACEITAS:</p>
+        <div class="payment-icons">
+          <span class="pay-tag">PIX (5% OFF)</span>
+          <span class="pay-tag">CRÉDITO (Até 10x)</span>
+          <span class="pay-tag">BOLETO</span>
+          <span class="pay-tag">APPLE PAY</span>
+        </div>
+      </div>
+
+      <button class="checkout-btn" onclick="checkout()">FINALIZAR COMPRA</button>
+    </div>
+  </aside>
+
+  <!-- RODAPÉ -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>AJUDA</h4>
+        <a href="#">Comprar online</a>
+        <a href="#">Opções de Pagamento</a>
+        <a href="#">Envios e Entregas</a>
+        <a href="#">Trocas e Devoluções</a>
+      </div>
+      <div class="footer-col">
+        <h4>AURA STUDIO</h4>
+        <a href="#">Sobre a Marca</a>
+        <a href="#">Sustentabilidade</a>
+        <a href="#">Lojas Físicas</a>
+        <a href="#">Carreiras</a>
+      </div>
+      <div class="footer-col">
+        <h4>PAGAMENTO SEGURO</h4>
+        <p>Aceitamos Pix, Cartões de Crédito, Boleto Bancário e Apple Pay.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AURA STUDIO S.A. TODOS OS DIREITOS RESERVADOS.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
